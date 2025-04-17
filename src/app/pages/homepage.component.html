@@ -1,0 +1,14 @@
+<div class="container mt-4">
+  <input type="text" [(ngModel)]="searchText" class="form-control mb-3" placeholder="ค้นหาเกม...">
+  <div class="row">
+    <div class="col-sm-6 col-md-4 col-lg-3 mb-3" *ngFor="let game of filteredGames">
+      <div class="card h-100" (click)="goToGame(game.title)" style="cursor: pointer;">
+        <img [src]="game.icon" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">{{ game.title }}</h5>
+          <p class="card-text">{{ game.subtitle }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

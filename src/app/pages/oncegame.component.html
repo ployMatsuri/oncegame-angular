@@ -1,0 +1,22 @@
+<div class="container mt-4" *ngIf="game">
+  <img [src]="game.icon" style="max-width: 100px;">
+  <h2>{{ game.title }}</h2>
+  <p>{{ game.subtitle }}</p>
+
+  <h4>เมนูสินค้า (mockup)</h4>
+  <ul>
+    <li *ngFor="let item of ['เพชร', 'สกิน', 'บัตรเติมเงิน']">{{ item }}</li>
+  </ul>
+
+  <form #form="ngForm" (ngSubmit)="onSubmit()" class="mt-4">
+    <div class="mb-3">
+      <label>UID</label>
+      <input type="text" name="UID" class="form-control" [(ngModel)]="formData.UID" required>
+    </div>
+    <div class="mb-3">
+      <label>สลิป</label>
+      <input type="file" name="slip" class="form-control" (change)="onFileChange($event)" required>
+    </div>
+    <button class="btn btn-success" type="submit" [disabled]="form.invalid">ส่งข้อมูล</button>
+  </form>
+</div>

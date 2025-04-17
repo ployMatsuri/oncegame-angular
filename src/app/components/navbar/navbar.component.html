@@ -1,0 +1,16 @@
+<nav class="navbar navbar-expand-lg" [ngClass]="themeService.isDark() ? 'navbar-dark bg-dark' : 'navbar-light bg-light'">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+  
+      <!-- Branding -->
+      <a class="navbar-brand fw-bold" (click)="goToHome()" style="cursor: pointer;">GameStore</a>
+  
+      <!-- Toggle Icon -->
+      <div class="ms-auto" (click)="toggleTheme()" style="cursor: pointer;">
+        <i 
+          [ngClass]="themeService.isDark() ? 'bi bi-moon-fill text-white' : 'bi bi-sun-fill text-dark'" 
+          style="font-size: 1.4rem;"
+        ></i>
+      </div>
+    </div>
+  </nav>
+  

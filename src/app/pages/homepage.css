@@ -1,0 +1,32 @@
+/* เพิ่มเงาและขอบมนให้กับการ์ด */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px); /* ทำให้การ์ดเลื่อนขึ้นเมื่อ hover */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* เพิ่มเงา */
+  }
+  
+  /* ลดขนาดรูปภาพและเพิ่มมุมมน */
+  .card-img-top {
+    height: 200px; /* ปรับขนาดรูปภาพให้เล็กลง */
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  /* เพิ่มสไตล์ให้กับชื่อและคำบรรยาย */
+  .card-body {
+    padding: 15px;
+  }
+  
+  .card-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+  
+  .card-text {
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
