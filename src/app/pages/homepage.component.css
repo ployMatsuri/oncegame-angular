@@ -1,5 +1,21 @@
-/* เพิ่มเงาและขอบมนให้กับการ์ด */
-.card {
+.banner-img {
+    height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+  }
+  
+  .carousel-caption h5,
+  .carousel-caption p {
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+  }
+  
+  .carousel-caption {
+    bottom: 20px;
+  }
+
+  .card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   
@@ -29,4 +45,5 @@
     font-size: 0.9rem;
     color: #555;
   }
+  
   

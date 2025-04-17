@@ -8,7 +8,8 @@ import { games } from '../models/games';
   selector: 'app-homepage',
   standalone: true,
   imports: [CommonModule, RouterModule,FormsModule],
-  templateUrl: './homepage.component.html'
+  templateUrl: './homepage.component.html',
+  styleUrls: ['./homepage.component.css'],
 })
 export class HomepageComponent {
   gamesList = games;
