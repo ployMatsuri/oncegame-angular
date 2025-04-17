@@ -1,0 +1,11 @@
+/* ปรับแต่งการเปลี่ยนสีเมื่อ hover */
+.navbar .btn:hover {
+    background-color: #0056b3; /* สีเมื่อ hover ปุ่มเข้าสู่ระบบ */
+    color: white;
+  }
+  
+  .navbar .btn-outline-success:hover {
+    background-color: #28a745; /* สีเมื่อ hover ปุ่มสมัครสมาชิก */
+    color: white;
+  }
+  

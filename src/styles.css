@@ -1,20 +1,26 @@
-body.light-mode {
-    background-color: #f8f9fa;
-    color: #212529;
+/* CSS สำหรับดาว */
+.star {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: moveUp 10s linear infinite; /* ดาวเคลื่อนที่จากล่างขึ้นบน */
+    pointer-events: none; 
+    z-index: -1;
   }
   
-  body.dark-mode {
-    background-color: #212529;
-    color: #f8f9fa;
+  @keyframes moveUp {
+    0% {
+      transform: translateY(calc(100vh + 50px)); /* เริ่มต้นจากด้านล่างของหน้าจอและพ้น footer */
+      opacity: 0.8;
+    }
+    100% {
+      transform: translateY(-180vh); 
+      opacity: 0;
+    }
   }
   
-  .dark-mode .navbar, .dark-mode .footer {
-    background-color: #343a40;
-    color: #fff;
-  }
-  
-  .light-mode .navbar, .light-mode .footer {
-    background-color: #ffffff;
-    color: #000;
+  body {
+    overflow-x: hidden; /* ป้องกันการเลื่อนในแนวนอน */
   }
   

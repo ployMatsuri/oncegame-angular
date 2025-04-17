@@ -1,15 +1,30 @@
 <nav class="navbar navbar-expand-lg" [ngClass]="themeService.isDark() ? 'navbar-dark bg-dark' : 'navbar-light bg-light'">
     <div class="container-fluid d-flex justify-content-between align-items-center">
-  
+    
       <!-- Branding -->
       <a class="navbar-brand fw-bold" (click)="goToHome()" style="cursor: pointer;">GameStore</a>
+    
+      <!-- Grouped Buttons and Toggle -->
+      <div class="d-flex ms-auto">
+        <!-- Login and Register Buttons -->
+        <a 
+          class="btn btn-outline-primary me-3 px-4" 
+          style="transition: background-color 0.3s, color 0.3s; border-radius: 10;">
+          เข้าสู่ระบบ
+        </a>
+        <a 
+          class="btn btn-outline-success me-3 px-4" 
+          style="transition: background-color 0.3s, color 0.3s; border-radius: 10;">
+          สมัครสมาชิก
+        </a>
   
-      <!-- Toggle Icon -->
-      <div class="ms-auto" (click)="toggleTheme()" style="cursor: pointer;">
-        <i 
-          [ngClass]="themeService.isDark() ? 'bi bi-moon-fill text-white' : 'bi bi-sun-fill text-dark'" 
-          style="font-size: 1.4rem;"
-        ></i>
+        <!-- Dark/Light Toggle Icon -->
+        <div (click)="toggleTheme()" style="cursor: pointer;">
+          <i 
+            [ngClass]="themeService.isDark() ? 'bi bi-moon-fill text-white' : 'bi bi-sun-fill text-dark'" 
+            style="font-size: 1.4rem;"
+          ></i>
+        </div>
       </div>
     </div>
   </nav>

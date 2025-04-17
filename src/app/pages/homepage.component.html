@@ -1,4 +1,5 @@
 <div class="container mt-4">
+  <h1 class="text-center mt-3 mb-4 animate__fadeInDown">Welcome to GameStore</h1>
   <!-- Banner Carousel -->
 <div id="gamesCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
   <div class="carousel-inner">
@@ -28,15 +29,21 @@
   
   <!-- Search Bar -->
   <input type="text" [(ngModel)]="searchText" class="form-control mb-3" placeholder="ค้นหาเกม...">
-  <div class="row">
-    <div class="col-sm-6 col-md-4 col-lg-3 mb-3" *ngFor="let game of filteredGames">
-      <div class="card h-100" (click)="goToGame(game.title)" style="cursor: pointer;">
-        <img [src]="game.icon" class="card-img-top">
-        <div class="card-body">
+
+  
+  <div class="row row-cols-2 row-cols-md-4 g-4 mt-3">
+    <div class="col" *ngFor="let game of filteredGames">
+      <div class="card h-100 game-card position-relative" (click)="goToGame(game.title)" style="cursor: pointer;">
+        <!-- New Label -->
+        <div class="new-label">New!</div>
+        
+        <img [src]="game.icon" class="card-img-top" [alt]="game.title" />
+        <div class="card-body text-center">
           <h5 class="card-title">{{ game.title }}</h5>
-          <p class="card-text">{{ game.subtitle }}</p>
+          <p class="card-text small text-muted">{{ game.subtitle }}</p>
         </div>
       </div>
     </div>
   </div>
+  
 </div>
